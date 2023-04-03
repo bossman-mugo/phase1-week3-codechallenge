@@ -1,4 +1,5 @@
-const filmsList = document.getElementsByID("films");
+const filmsList = document.getElementByID("films");
+
 
 //fetch data from the server
 fetch("http://localhost:3000/films")
@@ -44,7 +45,7 @@ fetch("http://localhost:3000/films")
         console.error("Error loading films:" ,error);
     });
 
-    function voting(){
+
         voteButton.addEventListener('click', () => {
             fetch(" http://localhost:3000/films/capacity")
                 .then(response => response.json())
@@ -82,4 +83,3 @@ fetch("http://localhost:3000/films")
                 });
 
         })
-    }
